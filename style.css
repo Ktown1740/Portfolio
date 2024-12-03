@@ -1,3 +1,4 @@
+/* Font */
 @font-face {
   font-family: 'KoHo';
   src: url('fonts/KoHo-Regular.ttf') format('truetype');
@@ -5,114 +6,234 @@
   font-style: normal;
 }
 
+/* Home Icon */
+.home-icon {
+  position: absolute; /* Position the icon at the top left corner */
+  top: 30px;
+  left: 40px;
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.home-icon img {
+  width: 50px; /* Set an appropriate size for the icon */
+  height: 50px;
+  transition: transform 0.3s ease; /* Add a hover effect */
+}
+
+.home-icon img:hover {
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+  cursor: pointer;
+}
+
+/* General Reset */
 body {
   margin: 0;
   padding: 0;
   font-family: 'KoHo', Arial, sans-serif;
-  color: #FFE4D5;
-  background-color: #e18f64;
+  color: #945D3F;
+  background-color: #FFE4D5;
+  line-height: 1.6;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 
-.container {
+/* Header and Text Styles */
+h1 {
+  font-family: 'KoHo', Arial, sans-serif;
+  color: #945D3F;
   text-align: center;
+}
+
+h1.name {
+  font-size: 6em;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 2em;
+  color: #945D3F;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2em;
+  color: #945D3F;
+  text-align: left;
+}
+
+/* Containers */
+.container {
   max-width: 1200px;
   width: 100%;
+  margin: 20px auto;
+  text-align: center;
 }
 
 .textContainer {
   width: 80%;
+  margin: 20px auto;
+}
+
+.galleryContainer {
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.descriptionContainer {
+  margin: 20px auto;
+  width: 80%;
+  text-align: left;
+}
+
+/* Gallery */
+.gallery {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px auto;
-}
-
-.box {
-  background-color: rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  border: 5px solid #945D3F;
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.name {
-  font-family: 'KoHo', Arial, sans-serif;
-  font-size: 4em;
-  font-weight: bold;
-  margin: 0px;
-  color: white;
-}
-
-.links {
-  font-size: 1.2em;
-  color: #FFE4D5;
-  padding: 0;
-  margin: 10 auto;
-}
-
-.links a {
-  color: #FFE4D5; /* Adjust to your preferred color */
-  text-decoration: none; /* Remove underline */
-  padding: 5px; /* Adjust this value to decrease or increase padding */
-  margin: 0 5px; /* Optional: Adjust margin to control spacing between links */
-}
-
-.links a:hover {
-  color: white; /* Change color on hover */
-  text-decoration: underline; /* Optional: underline on hover */
-}
-
-.description {
-  color: #FFE4D5;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 50px;
+  flex-direction: row; /* Stack items in a column */
+  gap: 20px; /* Space between images */
   padding: 0 20px;
 }
 
-.project-card {
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  border: 3px solid #945D3F;
-}
-
-.project-card img {
-  width: 100%;
-  max-height: 250px;
-  object-fit: cover;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(28, 14, 0, 0.7);
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.3s ease;
-}
-
-.project-card:hover .overlay {
-  opacity: 1;
-}
-
-.overlay .text {
-  color: white;
-  font-size: 1.5em;
+.gallery a {
+  text-decoration: none;
+  color: inherit;
   text-align: center;
+}
+
+.gallery img {
+  width: 100%;  /* Ensure images fill the container's width */
+  height: 250px; /* Fixed height for all images */
+  object-fit: cover; /* Crop images to fit the fixed size without stretching */
+  border: 3px solid #945D3F;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.gallery p {
+  font-size: 1em;
+}
+
+
+/* Social Items */
+#social-items {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+#social-items img {
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+#social-items img:hover {
+  transform: scale(1.1);
+}
+
+/* Book Cover Designs Specific */
+
+.descriptionBook {
+  text-align: center;
+}
+
+.containerBook {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Ensure text aligns with the image containers */
+.descriptionContainerBook {
+  margin-bottom: 40px;
+  width: 100%; /* Ensure text takes full width of container */
+  text-align: center; /* Center text within the container */
+}
+
+.projectBook {
+  margin: 40px 0;
+}
+
+.projectContentBook {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: center; /* Center the content inside */
+}
+
+/* Ensure text in project sections aligns with the images */
+.projectTextBook {
+  max-width: 600px;
+  margin: 0 auto; /* Center text in its container */
+  text-align: center;
+}
+
+.projectImagesBook img {
+  width: 100%;
+  max-width: 300px;
+  border: 3px solid #945D3F;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.projectImagesBook img:hover {
+  transform: scale(1.05);
+}
+
+.projectRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.projectTextBook {
+  flex: 1;
+  max-width: 600px;
+  text-align: center;
+}
+
+.projectImageRight {
+  flex-shrink: 0;
+  max-width: 300px;
+}
+
+.projectImageRight img {
+  width: 100%;
+  border: 3px solid #945D3F;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.projectImageRight img:hover {
+  transform: scale(1.05);
+}
+
+/* Centered Second Image */
+.centeredImage {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.centeredImage img {
+  max-width: 1000px;
+  width: 100%;
+  border: 3px solid #945D3F;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* non centered images */
+
+.rightImage {
+  text-align: right;
+  margin-top: 20px;
 }
