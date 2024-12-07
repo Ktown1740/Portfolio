@@ -6,17 +6,49 @@
   font-style: normal;
 }
 
+/* Nav Bar */
+.topnav {
+  background-color: #bc8a70;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically center items */
+  justify-content: center; /* Space out the links */
+  height: 40px; /* Increase height for better spacing */
+  position: fixed; /* Sticks the navbar to the top */
+  width: 100%; /* Full width */
+  top: 0; /* Align to the top of the page */
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Style for links */
+.topnav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px; /* Adjust font size */
+  padding: 10px 25px; /* Add some padding for clickable area */
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+}
+
+/* Special case for the home icon */
+.topnav a.home-icon img {
+  vertical-align: middle; /* Vertically center the icon */
+}
+
+/* Hover effect for links */
+.topnav a:hover {
+  color:#633a24;
+  text-shadow: #633a24;
+}
 /* Home Icon */
 .home-icon {
   position: absolute; /* Position the icon at the top left corner */
-  top: 30px;
+  top: -12px;
   left: 40px;
   z-index: 1000; /* Ensure it appears above other elements */
 }
 
 .home-icon img {
-  width: 50px; /* Set an appropriate size for the icon */
-  height: 50px;
+  width: 45px; /* Set an appropriate size for the icon */
+  height: 45px;
   transition: transform 0.3s ease; /* Add a hover effect */
 }
 
@@ -48,7 +80,7 @@ h1 {
 h1.name {
   font-size: 6em;
   font-weight: bold;
-  margin: 20px 0;
+  margin: 0px 0px;
 }
 
 h2 {
@@ -231,4 +263,17 @@ p {
 .rightImage {
   text-align: right;
   margin-top: 20px;
+}
+
+.sideImage {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.sideImage img {
+  max-width: 1000px;
+  width: 45%;
+  border: 3px solid #945D3F;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
