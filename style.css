@@ -115,25 +115,32 @@ p {
 /* Gallery */
 .gallery {
   display: flex;
-  flex-direction: row; /* Stack items in a column */
-  gap: 20px; /* Space between images */
+  flex-direction: row;   /* Arrange in a row */
+  gap: 20px;
   padding: 0 20px;
+  overflow-x: auto;      /* Enable horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Smooth snap scrolling */
+  -webkit-overflow-scrolling: touch; /* Better on mobile */
 }
 
 .gallery a {
+  flex: 0 0 auto;        /* Prevent shrinking */
+  width: 250px;          /* Fixed card width */
+  scroll-snap-align: start; /* Align nicely when scrolling */
   text-decoration: none;
   color: inherit;
   text-align: center;
 }
 
 .gallery img {
-  width: 100%;  /* Ensure images fill the container's width */
-  height: 250px; /* Fixed height for all images */
-  object-fit: cover; /* Crop images to fit the fixed size without stretching */
+  width: 100%;
+  height: 250px;
+  object-fit: cover;     /* Crop image instead of squishing */
   border: 3px solid #945D3F;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
+
 
 .gallery img:hover {
   transform: scale(1.05);
@@ -171,7 +178,7 @@ p {
 .containerBook {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
@@ -278,3 +285,51 @@ p {
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
+
+
+
+/* Container */
+.containerUIUX {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.nameUIUX {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.descriptionContainerUIUX {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+.descriptionUIUX {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Grid */
+.uiuxGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.uiuxItem img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+/* .uiuxItem img:hover {
+  transform: scale(1.03);
+} */
