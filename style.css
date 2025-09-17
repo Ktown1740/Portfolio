@@ -80,7 +80,8 @@ h1 {
 h1.name {
   font-size: 6em;
   font-weight: bold;
-  margin: 0px 0px;
+  /* margin: 0px 0px; */
+  margin: -5px auto -10px auto;
 }
 
 h2 {
@@ -93,6 +94,7 @@ p {
   font-size: 1.2em;
   color: #945D3F;
   text-align: center;
+  margin: 10px auto;
 }
 
 /* Containers */
@@ -111,6 +113,7 @@ p {
 .galleryContainer {
   max-width: 1200px;
   margin: 20px auto;
+  
 }
 /* Gallery */
 .gallery {
@@ -118,15 +121,11 @@ p {
   flex-direction: row;   /* Arrange in a row */
   gap: 20px;
   padding: 0 20px;
-  overflow-x: auto;      /* Enable horizontal scrolling */
-  scroll-snap-type: x mandatory; /* Smooth snap scrolling */
-  -webkit-overflow-scrolling: touch; /* Better on mobile */
 }
 
 .gallery a {
   flex: 0 0 auto;        /* Prevent shrinking */
   width: 250px;          /* Fixed card width */
-  scroll-snap-align: start; /* Align nicely when scrolling */
   text-decoration: none;
   color: inherit;
   text-align: center;
@@ -135,7 +134,6 @@ p {
 .gallery img {
   width: 100%;
   height: 250px;
-  object-fit: cover;     /* Crop image instead of squishing */
   border: 3px solid #945D3F;
   border-radius: 10px;
   transition: transform 0.3s ease;
@@ -151,11 +149,10 @@ p {
   font-size: 1em;
 }
 
-
 /* Social Items */
 
 #social-items {
-  margin: -15px;
+  margin: -20px auto -35px auto; 
 }
 
 #social-items img {
