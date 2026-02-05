@@ -3,64 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Main Page</title>
+  <title>Kaylah Townsend | Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<div class="topnav">
-  <a href="index.html" class="home-icon">
-    <img src="images/home-icon.png" alt="Home Icon">
-    </a>
-  <a href="ui-ux.html" class="active">UI/UX</a>
-  <a href="book-cover-designs.html">Book Cover Designs</a>
-  <a href="3d-art.html">3D Art</a>
-  <a href="2d-art.html">Character Designs</a>
-</div>
+
 <body>
-  <div class="container">
+
+  <!-- Navigation -->
+  <nav class="topnav">
+    <a href="index.html" class="home-icon">
+      <img src="images/home-icon.png" alt="Home Icon">
+    </a>
+    <a href="ui-ux.html">UI/UX</a>
+    <a href="book-cover-designs.html">Book Cover Designs</a>
+    <a href="3d-art.html">3D Art</a>
+    <a href="2d-art.html">Character Designs</a>
+  </nav>
+
+  <!-- Intro Section -->
+  <main class="container">
     <h1 class="name">Kaylah Townsend</h1>
+
     <div class="textContainer">
       <p class="description">
-       Hi, I’m Kaylah Townsend! I’m a Computational Media student from Georgia Tech with 
-       a strong focus on front-end development, UI/UX design, and creative media. My work 
-       bridges technology and design, blending coding expertise with a passion for visual 
-       storytelling and user experience. I have hands-on experience with front-end frameworks, 
-       responsive design, and prototyping tools, as well as creative skills in 3D modeling, 
-       digital art, and game development. I’m excited by opportunities that allow me to craft 
-       intuitive, visually engaging interfaces and explore the intersection of technology, art, 
-       and user-centered design.
+        Hi, I’m Kaylah Townsend! I’m a Computational Media student from Georgia Tech with 
+        a strong focus on front-end development, UI/UX design, and creative media. My work 
+        bridges technology and design, blending coding expertise with a passion for visual 
+        storytelling and user experience.
       </p>
     </div>
+
+    <!-- Social Icons -->
     <div id="social-items">
-      <!-- what is the difference between class and id? -->
-      <div id="social-items">
-        <img src="images/github-icon.png" alt="GitHub" 
-             onclick="window.open('https://www.github.com/Ktown1740', '_blank')" style="cursor: pointer;">
-        <img src="images/email-icon.png" alt="Email" 
-             onclick="window.location.href='mailto:kaylahtownsend21@gmail.com'" style="cursor: pointer;">
-        <img src="images/linkedin-icon.png" alt="LinkedIn" 
-             onclick="window.open('https://www.linkedin.com/in/kaylahtownsend', '_blank')" style="cursor: pointer;">
-      </div>      
+      <img src="images/github-icon.png" alt="GitHub"
+        onclick="window.open('https://www.github.com/Ktown1740', '_blank')">
+      <img src="images/email-icon.png" alt="Email"
+        onclick="window.location.href='mailto:kaylahtownsend21@gmail.com'">
+      <img src="images/linkedin-icon.png" alt="LinkedIn"
+        onclick="window.open('https://www.linkedin.com/in/kaylahtownsend', '_blank')">
     </div>
-  </div>
+  </main>
+
+  <!-- Projects -->
   <div class="galleryContainer">
-    <div class="gallery">
-       <a href="ui-ux.html">
-        <img src="images/DB-1.png" alt="UI/UX">
-        <p>UX/UI</p>
-      </a>
-      <a href="book-cover-designs.html">
-        <img src="images/cropped-book.png" alt="Book Cover Designs">
-        <p>Book Cover Designs</p>
-      </a>
-      <a href="3d-art.html">
-        <img src="images/David-head.png" alt="3D Art">
-        <p>3D Art</p>
-      </a>
-      <a href="2d-art.html">
-        <img src="images/cropped-sara.png" alt="2D art">
-        <p>Character Designs</p>
-      </a>
-    </div>    
+
+    <!-- Technical Projects -->
+    <section class="project-section">
+      <h2 class="section-header">Technical Projects</h2>
+      <div class="gallery">
+        <a href="ui-ux.html">
+          <img src="images/DB-1.png" alt="UI/UX Project">
+          <p>UX / UI Design</p>
+        </a>
+
+        <a href="web-dev.html">
+          <img src="images/404page.png" alt="404 Page">
+          <p>Web Development</p>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Creative Projects -->
+    <section class="project-section">
+      <h2 class="section-header">Creative Projects</h2>
+      <div class="gallery">
+        <a href="book-cover-designs.html">
+          <img src="images/cropped-book.png" alt="Book Cover Designs">
+          <p>Book Cover Designs</p>
+        </a>
+
+        <a href="3d-art.html">
+          <img src="images/David-head.png" alt="3D Art">
+          <p>3D Art</p>
+        </a>
+
+        <a href="2d-art.html">
+          <img src="images/cropped-sara.png" alt="Character Designs">
+          <p>Character Designs</p>
+        </a>
+      </div>
+    </section>
+
   </div>
 
 </body>

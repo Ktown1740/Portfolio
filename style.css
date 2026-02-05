@@ -134,6 +134,7 @@ p {
 .gallery img {
   width: 100%;
   height: 250px;
+  object-fit: cover;
   border: 3px solid #945D3F;
   border-radius: 10px;
   transition: transform 0.3s ease;
@@ -283,7 +284,26 @@ p {
   transition: transform 0.3s ease;
 }
 
+.sideImage img.arrow {
+  width: 3%;
+  height: 3%;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  align-self: center;
+}
 
+.sideImage video {
+  width: 45%;
+  border: 3px solid #945D3F;
+  border-radius: 10px;
+}
+
+.sideImage video.mobile {
+  height: 10%;
+  width: 12%;
+  margin-left: 1%;
+}
 
 /* Container */
 .containerUIUX {
@@ -330,3 +350,8 @@ p {
 /* .uiuxItem img:hover {
   transform: scale(1.03);
 } */
+
+
+
+
+
